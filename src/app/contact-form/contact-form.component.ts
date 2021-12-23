@@ -11,6 +11,13 @@ export class ContactFormComponent {
     {id: 1, name: 'Email'},
     {id: 2, name: 'Phone'}
   ]
+
+  qualificationMethod = [
+    {id: 1, name: 'MCA'},
+    {id: 2, name: 'BE'},
+    {id: 3, name: 'MCom'},
+    {id: 4, name: 'BCA'}
+  ]
   
   log(x: any) {
     console.log(x);
