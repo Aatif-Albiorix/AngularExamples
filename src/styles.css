@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-.form-group {
+/* .form-group {
     padding: 20px;
 }
 .form-control.ng-touched.ng-invalid {
@@ -9,5 +9,9 @@
 }
 
 .radio {
+    padding: 20px;
+} */
+
+body {
     padding: 20px;
 }
