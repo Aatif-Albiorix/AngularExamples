@@ -4,10 +4,23 @@
         (keyup.enter)="addTopic(topic)" #topic>
     <ul class="list-group">
         <li 
-            *ngFor = "let topic of topics.controls"
-            (click)="removeTopic(topic)"
+            *ngFor = "let topic of topics.controls; let index = index"
+            (click)="removeTopic(index)"
             class="list-group-item">
             {{topic.value}}
         </li>
     </ul>
 </form>
+
+<!-- <form [formGroup]="form">
+    <input formControlName="name">
+    <div formGroupName="contact">
+        <input formControlName="email">
+        <input formControlName="phone">
+    </div>
+    <ul>
+        <li *ngFor="let topic of topics.control">
+            {{topic.value }}
+        </li>
+    </ul>
+</form> -->
