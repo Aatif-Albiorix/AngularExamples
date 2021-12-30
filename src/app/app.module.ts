@@ -21,6 +21,12 @@ import { AppErrorHandler } from './common/app-error-handler';
 import { ObservableComponent } from './ObservableExample/observable/observable.component';
 import { PromiseComponent } from './ObservableExample/promise/promise.component';
 import { ObservableService } from './ObservableExample/service/observable.service';
+import { Child1Component } from './SubjectExample/child1/child1.component';
+import { Child2Component } from './SubjectExample/child2/child2.component';
+import { Child3Component } from './SubjectExample/child3/child3.component';
+import { Child4Component } from './SubjectExample/child4/child4.component';
+import { SharedService } from './SubjectExample/Service/shared.service';
+import { BehaviorComponent } from './SubjectExample/behavior/behavior.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,12 @@ import { ObservableService } from './ObservableExample/service/observable.servic
     GithubFollowersComponent,
     PostsComponent,
     ObservableComponent,
-    PromiseComponent
+    PromiseComponent,
+    Child1Component,
+    Child2Component,
+    Child3Component,
+    Child4Component,
+    BehaviorComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +66,8 @@ import { ObservableService } from './ObservableExample/service/observable.servic
   providers: [
     PostService,
     { provide: ErrorHandler, useClass: AppErrorHandler},
-    ObservableService
+    ObservableService,
+    SharedService
    ],
   bootstrap: [AppComponent]
 })
