@@ -18,6 +18,9 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
 import { PostsComponent } from './posts/posts.component';
 import { PostService } from './services/post.service';
 import { AppErrorHandler } from './common/app-error-handler';
+import { ObservableComponent } from './ObservableExample/observable/observable.component';
+import { PromiseComponent } from './ObservableExample/promise/promise.component';
+import { ObservableService } from './ObservableExample/service/observable.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { AppErrorHandler } from './common/app-error-handler';
     GithubProfileComponent,
     NotFoundComponent,
     GithubFollowersComponent,
-    PostsComponent
+    PostsComponent,
+    ObservableComponent,
+    PromiseComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,8 @@ import { AppErrorHandler } from './common/app-error-handler';
   ],
   providers: [
     PostService,
-    { provide: ErrorHandler, useClass: AppErrorHandler}
+    { provide: ErrorHandler, useClass: AppErrorHandler},
+    ObservableService
    ],
   bootstrap: [AppComponent]
 })
