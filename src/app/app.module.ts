@@ -27,6 +27,9 @@ import { Child3Component } from './SubjectExample/child3/child3.component';
 import { Child4Component } from './SubjectExample/child4/child4.component';
 import { SharedService } from './SubjectExample/Service/shared.service';
 import { BehaviorComponent } from './SubjectExample/behavior/behavior.component';
+import { DemoComponent } from './InterceptorExample/demo/demo.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { DemoInterceptor } from './services/demo.interceptor';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,8 @@ import { BehaviorComponent } from './SubjectExample/behavior/behavior.component'
     Child2Component,
     Child3Component,
     Child4Component,
-    BehaviorComponent
+    BehaviorComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,
@@ -60,14 +64,16 @@ import { BehaviorComponent } from './SubjectExample/behavior/behavior.component'
       { path: 'profile/:username', component: GithubProfileComponent},
       { path: 'followers', component: GithubFollowersComponent},
       { path: 'posts', component: PostsComponent},
-      { path: '**', component: NotFoundComponent}
+      { path: '**', component: NotFoundComponent},
+      {path: 'demo' , component: DemoComponent}
     ])
   ],
   providers: [
     PostService,
     { provide: ErrorHandler, useClass: AppErrorHandler},
     ObservableService,
-    SharedService
+    SharedService,
+    { provide: HTTP_INTERCEPTORS, useClass: DemoInterceptor, multi: true}
    ],
   bootstrap: [AppComponent]
 })
