@@ -30,6 +30,7 @@ import { BehaviorComponent } from './SubjectExample/behavior/behavior.component'
 import { DemoComponent } from './InterceptorExample/demo/demo.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DemoInterceptor } from './services/demo.interceptor';
+import { OperationComponent } from './ArrayOperationExample/operation/operation.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { DemoInterceptor } from './services/demo.interceptor';
     Child3Component,
     Child4Component,
     BehaviorComponent,
-    DemoComponent
+    DemoComponent,
+    OperationComponent
   ],
   imports: [
     BrowserModule,
@@ -59,15 +61,8 @@ import { DemoInterceptor } from './services/demo.interceptor';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      { path: 'profile/:username', component: GithubProfileComponent},
-      { path: 'followers', component: GithubFollowersComponent},
-      { path: 'posts', component: PostsComponent},
-      { path: '**', component: NotFoundComponent},
-      {path: 'demo' , component: DemoComponent}
-    ])
-  ],
+    RouterModule
+    ],
   providers: [
     PostService,
     { provide: ErrorHandler, useClass: AppErrorHandler},
