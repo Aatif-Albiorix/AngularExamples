@@ -31,7 +31,9 @@ import { DemoComponent } from './InterceptorExample/demo/demo.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DemoInterceptor } from './services/demo.interceptor';
 import { OperationComponent } from './ArrayOperationExample/operation/operation.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ThemeComponent } from './Material-Demo/theme/theme.component';
+import { MaterialModule } from './material/material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +55,8 @@ import { OperationComponent } from './ArrayOperationExample/operation/operation.
     Child4Component,
     BehaviorComponent,
     DemoComponent,
-    OperationComponent
+    OperationComponent,
+    ThemeComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,9 @@ import { OperationComponent } from './ArrayOperationExample/operation/operation.
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule,
+    MaterialModule
     ],
   providers: [
     PostService,

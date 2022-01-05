@@ -1,0 +1,254 @@
+
+<!-- Typograpy
+
+<div class='mat-title'>Typograpy</div>
+
+<div class='mat-body-1'>body-text</div>
+<div class='mat-body-2'>bold-body-text</div>
+<div class='mat-caption'>caption-text</div>
+
+<mat-divider></mat-divider>
+
+<div class="mat-display-1">Mat Display 1</div>
+<div class="mat-display-2">Mat Display 2</div>
+<div class="mat-display-3">Mat Display 3</div>
+<div class="mat-display-4">Mat Display 4</div>
+
+<mat-divider></mat-divider>
+
+<div class='mat-headline'>H1 tag</div>
+<div class='mat-title'>H2 tag</div>
+<div class='mat-subheading-2'>H3 tag</div>
+<div class='mat-subheading-1'>H4 tag</div>
+
+<mat-divider></mat-divider>
+
+<div class="mat-typography">
+    <h1>h1 tag</h1>
+    <h2>h2 tag</h2>
+    <h3>h3 tag</h3>
+    <h4>h4 tag</h4>
+</div>
+
+<mat-divider></mat-divider> -->
+
+
+<!-- Button
+<div>
+    <button mat-button>click me</button>
+    <button mat-raised-button color="primary">click me</button>
+    <button mat-flat-button color="accent">click me</button>
+    <button mat-stroked-button color="warn">click me</button>
+</div>
+<div>
+    <button mat-icon-button>Icon</button>
+    <button mat-fab>fab</button>
+    <button mat-mini-fab>MiniFab</button>
+</div>
+
+<mat-divider></mat-divider> -->
+
+<!-- ButtonToggle
+<div>
+    <mat-button-toggle-group #toggleGroup='matButtonToggleGroup' multiple>
+        <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+        <mat-button-toggle value="React">React</mat-button-toggle>
+        <mat-button-toggle value="Vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{toggleGroup.value}}
+</div>
+
+<mat-divider></mat-divider> -->
+
+
+<!-- Badge
+<div>
+    <span [matBadge]="notification" [matBadgeHidden]="notification === 0">Notification</span>
+</div>
+<div>
+    <span matBadge="5" matBadgePosition="below before">Notification</span>
+</div><div>
+    <span matBadge="5" matBadgeSize="small">Notification</span>
+</div><div>
+    <span matBadge="5" matBadgeColor="warn" matBadgeOverlap="false">Notification</span>
+</div><div>
+    <span matBadge="5" >Notification</span>
+</div> -->
+
+<!-- Progress-Bar -->
+
+<!-- <section class="example-section">
+    <label class="example-margin">Color:</label>
+    <mat-radio-group [(ngModel)]="color">
+      <mat-radio-button class="example-margin" value="primary">
+        Primary
+      </mat-radio-button>
+      <mat-radio-button class="example-margin" value="accent">
+        Accent
+      </mat-radio-button>
+      <mat-radio-button class="example-margin" value="warn">
+        Warn
+      </mat-radio-button>
+    </mat-radio-group>
+  </section>
+
+  <section class="example-section">
+    <label class="example-margin">Mode:</label>
+    <mat-radio-group [(ngModel)]="mode">
+      <mat-radio-button class="example-margin" value="determinate">
+        Determinate
+      </mat-radio-button>
+      <mat-radio-button class="example-margin" value="indeterminate">
+        Indeterminate
+      </mat-radio-button>
+      <mat-radio-button class="example-margin" value="buffer">
+        Buffer
+      </mat-radio-button>
+      <mat-radio-button class="example-margin" value="query">
+        Query
+      </mat-radio-button>
+    </mat-radio-group>
+  </section>
+
+  <section class="example-section" *ngIf="mode === 'determinate' || mode === 'buffer'">
+    <label class="example-margin">Progress:</label>
+    <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+  </section>
+  <section class="example-section" *ngIf="mode === 'buffer'">
+    <label class="example-margin">Buffer:</label>
+    <mat-slider class="example-margin" [(ngModel)]="bufferValue"></mat-slider>
+  </section>
+
+  <h2 class="example-h2">Result</h2>
+
+  <section class="example-section">
+    <mat-progress-bar
+        class="example-margin"
+        [color]="color"
+        [mode]="mode"
+        [value]="value"
+        [bufferValue]="bufferValue">
+    </mat-progress-bar>
+  </section> -->
+
+<!-- Navbar
+
+<mat-toolbar color="primary" class="navbar">
+    <div>Menu</div>
+    <div>
+        <span>Home</span>
+        <span>About</span>
+        <span>Service</span>
+    </div>
+</mat-toolbar> -->
+
+<!-- SideNav -->   
+
+<!-- <mat-sidenav-container>
+    <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="opened">SideNav</mat-sidenav>
+    <mat-sidenav-content>Main
+        <button (click)="opened=!opened">Toggle Open</button>
+        <button (click)="sidenav.open()">Open</button>
+        <button (click)="sidenav.close()">close</button>
+        <button (click)="sidenav.toggle()">toggle</button>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<!-- Menu -->
+
+<!-- <mat-menu #appMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subMenu" xPosition="after" yPosition="above">FrontEnd</button>
+    <button mat-menu-item>BackEnd</button>
+</mat-menu>
+
+<button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+
+<mat-menu #subMenu="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>
+</mat-menu>
+
+<mat-menu #lazyMenu="matMenu">
+    <ng-template matMenuContent let-name="name" let-hobby="hobby">
+        <button mat-menu-item>Setting</button>
+        <button mat-menu-item>Hobby is {{ hobby }}</button>
+        <button mat-menu-item>Logout {{ name }}</button>
+    </ng-template>
+</mat-menu>
+
+<button 
+    mat-raised-button  
+    [matMenuTriggerData]="{ name: 'Vishwas', hobby: 'Cricket'}" 
+    [matMenuTriggerFor]="lazyMenu">
+        Vishwas
+</button>
+<button 
+    mat-raised-button 
+    [matMenuTriggerData]="{ name: 'Codevolution', hobby: 'Football'}" 
+    [matMenuTriggerFor]="lazyMenu">
+        Codevolution
+</button> -->
+ 
+<!-- List
+
+<mat-list dense>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-list-item>Item 3</mat-list-item>
+</mat-list>
+
+<mat-nav-list>
+    <a mat-list-item href="#">Home</a>
+    <a mat-list-item href="#">About</a>
+    <a mat-list-item href="#">Service</a>
+</mat-nav-list>
+
+<mat-list>
+    <mat-list-item>
+        <mat-icon matListIcon>home</mat-icon>
+        <h3 matLine>Heading</h3>
+        <h3 matLine>Line</h3>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>Heading 2</h3>
+        <h3 matLine>Line 2</h3>
+    </mat-list-item>
+</mat-list> -->
+
+<!-- Grid-List -->
+
+<!-- <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="10px">
+    <mat-grid-tile>Title-1</mat-grid-tile>
+    <mat-grid-tile>Title-2</mat-grid-tile>
+    <mat-grid-tile>Title-3</mat-grid-tile>
+    <mat-grid-tile>Title-4</mat-grid-tile>
+</mat-grid-list> -->
+
+<!-- Expansion -->
+
+<mat-accordion multi="true" hideToggle>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>Angular Fundamentals</mat-panel-title>
+        <mat-panel-description>Total Duration : 3 Hours</mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This is the Panel Content..</p>
+    <mat-action-row>
+        <button mat-button>Enroll</button>
+    </mat-action-row>
+</mat-expansion-panel>
+
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>Angular MAterial</mat-panel-title>
+        <mat-panel-description>Total Duration : 2 Hours</mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This is the Panel Content..</p>
+    <mat-action-row>
+        <button mat-button>Enroll</button>
+    </mat-action-row>
+</mat-expansion-panel>
+</mat-accordion>
