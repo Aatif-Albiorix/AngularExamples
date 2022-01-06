@@ -26,3 +26,12 @@ mat-sidenav {
 mat-grid-tile {
     background-color: lightblue;
 }
+
+.example-card {
+    width: 400px;
+}
+
+.example-action-button {
+    margin-top: 8px;
+    margin-right: 8px;
+  }

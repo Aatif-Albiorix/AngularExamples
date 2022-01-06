@@ -32,13 +32,15 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DemoInterceptor } from './services/demo.interceptor';
 import { OperationComponent } from './ArrayOperationExample/operation/operation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ThemeComponent } from './Material-Demo/theme/theme.component';
+import { CustomSnackBarComponent, ThemeComponent } from './Material-Demo/theme/theme.component';
 import { MaterialModule } from './material/material.module';
+import { DialogExampleComponent } from './Material-Demo/dialog-example/dialog-example.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignupFormComponent,
     ContactFormComponent,
+    CustomSnackBarComponent,
     NewCourseFormComponent,
     NewCourseFormComponentComponent,
     NavbarComponent,
@@ -56,8 +58,10 @@ import { MaterialModule } from './material/material.module';
     BehaviorComponent,
     DemoComponent,
     OperationComponent,
-    ThemeComponent
+    ThemeComponent,
+    DialogExampleComponent
   ],
+  entryComponents: [CustomSnackBarComponent, DialogExampleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

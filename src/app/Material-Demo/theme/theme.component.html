@@ -229,7 +229,7 @@
 
 <!-- Expansion -->
 
-<mat-accordion multi="true" hideToggle>
+<!-- <mat-accordion multi="true" hideToggle>
 <mat-expansion-panel>
     <mat-expansion-panel-header>
         <mat-panel-title>Angular Fundamentals</mat-panel-title>
@@ -251,4 +251,246 @@
         <button mat-button>Enroll</button>
     </mat-action-row>
 </mat-expansion-panel>
-</mat-accordion>
+</mat-accordion> -->
+
+<!-- Card -->
+
+<!-- <mat-card class="example-card">
+    <mat-card-title>Card Title</mat-card-title>
+    <mat-card-subtitle>Card Sub-Title</mat-card-subtitle>
+    <mat-card-content>
+      <p>This card indeterminates progress bar.</p>
+      <p>When it comes to writers' block, often the most difficult part is simply beginning to put words to paper. One way that can often help is to write about something completely different from what you're having the writers' block about.</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">LIKE</button>
+      <button mat-stroked-button color="accent">SHARE</button>
+    </mat-card-actions>
+  </mat-card> -->
+<!-- 
+  <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+      <mat-tab label="Angular">Angular Content</mat-tab>
+      <mat-tab label="React">React Content</mat-tab>
+      <mat-tab label="Vue">Vue Content</mat-tab>
+  </mat-tab-group> -->
+  <!-- {{tabRef.selectedIndex}} --> 
+
+
+  <!-- <nav mat-tab-nav-bar [backgroundColor]="background" #tabRef>
+    <a mat-tab-link *ngFor="let link of links"
+       (click)="activeLink = link"
+       [active]="activeLink == link"> {{link}} </a>
+    <a mat-tab-link disabled>Disabled Link</a>
+  </nav>
+  
+  <button mat-raised-button class="example-action-button" color="primary" (click)="toggleBackground()">
+    Toggle background
+  </button>
+  <button mat-raised-button class="example-action-button" color="accent" (click)="addLink()">
+    Add link
+  </button>
+  <button mat-raised-button class="example-action-button" color="warn" (click)="remove(tabRef.selectedIndex)" [disabled]="links.length === 1">
+      Delete link
+  </button> -->
+
+
+  <!-- Stepper-Horizontal -->
+  
+  <!-- <mat-horizontal-stepper linear>
+      <mat-step label="Shipping Address" completed="false">
+          <p>Shipping Address Detail</p>
+      </mat-step>
+      <mat-step label="Billing Address" completed="false">
+          <p>Billing Address Detail</p>
+          <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+          </div>
+      </mat-step>
+      <mat-step label="Place Order" completed="false">
+          <p>Order Detail</p>
+      </mat-step>
+  </mat-horizontal-stepper> -->
+
+<!-- <mat-stepper labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out your name</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your address</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper> -->
+
+    <!-- <mat-stepper linear #stepper>
+          <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+              <ng-template matStepLabel>Fill out your name</ng-template>
+              <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>Fill out your address</ng-template>
+              <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                       required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <p>You are now done.</p>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+          </mat-step>
+        </mat-stepper> -->
+
+
+  <!-- Input -->
+
+<!-- <mat-form-field hideRequiredMarker appearance="fill" color="accent">
+  <mat-label>Name</mat-label>
+  <input matInput required>
+  <mat-hint align="end">Min 5 character</mat-hint>
+</mat-form-field>
+
+<mat-form-field hideRequiredMarker appearance="outline" color="warn">
+  <mat-label>Name</mat-label>
+  <input matInput required>
+  <mat-hint align="end">Min 5 character</mat-hint>
+</mat-form-field> -->
+
+
+<!-- Select -->
+
+<!-- <mat-form-field>
+  <mat-label>Topic</mat-label>
+  <mat-select [(value)]="selectedValue" multiple>
+    <mat-option>None</mat-option>
+    <mat-optgroup label="web">
+      <mat-option value="angular">Angular</mat-option>
+      <mat-option value="react">React</mat-option>
+      <mat-option value="vue">Vue</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="Mobile">
+      <mat-option value="ionic">Ionic</mat-option>
+      <mat-option value="reactnative">React Native</mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+
+{{selectedValue}} -->
+
+
+<!-- AutoComplete -->
+
+<!-- <form>
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="auto"/>
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let option of objectOption" [value]="option">
+        {{option.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form> -->
+
+<!-- checkbox -->
+
+<!-- <mat-checkbox>
+  subscribe
+</mat-checkbox>
+<br>
+<mat-checkbox labelPosition="before">
+  subscribe
+</mat-checkbox>
+<br>
+<mat-checkbox color="primary">
+  subscribe
+</mat-checkbox>
+<br>
+<mat-checkbox color="warn">
+  subscribe
+</mat-checkbox> -->
+
+
+<!-- RadioButton -->
+
+<!-- <mat-radio-group>
+  <mat-radio-button value="Angular" color="primary">Angular</mat-radio-button>
+  <mat-radio-button value="React">React</mat-radio-button>
+  <mat-radio-button value="Vue" color="warn">Vue</mat-radio-button>
+</mat-radio-group> -->
+
+<!-- DatePicker -->
+
+<!-- <mat-form-field>
+  <input matInput [matDatepicker]="myDatePicker" [matDatepickerFilter]="dateFilter">
+  <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+  <mat-datepicker #myDatePicker></mat-datepicker>
+</mat-form-field> -->
+
+<!-- ToolTip -->
+
+<!-- <button 
+  mat-raised-button 
+  matTooltip="Welcome to my Profile" 
+  matTooltipPosition="after"
+  matTooltipShowDelay="2000"
+  matTooltipHideDelay="2000"
+  >
+  Hello
+</button> -->
+
+<!-- SnackBar -->
+
+<!-- <button mat-raised-button (click)="openSnackBar('Item Deleted', 'Undo')">Delete</button>
+
+<button mat-button (click)="openCustomSnackBar()">
+  Show Custom Snackbar
+</button> -->
+
+<!-- Dialog -->
+
+<button mat-raised-button (click)="openDialog()">Open Dialog</button>

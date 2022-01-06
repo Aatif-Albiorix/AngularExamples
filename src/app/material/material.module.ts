@@ -14,7 +14,20 @@ import { MatMenuModule } from '@angular/material/menu'
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from "@angular/material/grid-list"
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatDialogModule} from '@angular/material/dialog';
+ 
 
 const MaterialComponent = [
   MatButtonModule,
@@ -31,7 +44,20 @@ const MaterialComponent = [
   MatMenuModule,
   MatListModule,
   MatGridListModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatCardModule,
+  MatTabsModule,
+  MatStepperModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatTooltipModule,
+  MatSnackBarModule,
+  MatDialogModule
 ]
 
 @NgModule({
