@@ -35,3 +35,33 @@ mat-grid-tile {
     margin-top: 8px;
     margin-right: 8px;
   }
+
+  table {
+    width: 100%;
+  }
+  
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid maroon;
+    box-sizing: border-box;
+    height: 100;
+}
+
+.container {
+    height: 400px;
+}
+
+.example-chip-list {
+    width: 100%;
+  }
+  .example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }  

@@ -493,4 +493,105 @@
 
 <!-- Dialog -->
 
-<button mat-raised-button (click)="openDialog()">Open Dialog</button>
+<!-- <button mat-raised-button (click)="openDialog()">Open Dialog</button> -->
+
+<!-- Data-Table -->
+
+<!-- <mat-form-field>
+  <input (keyup)="applyFilter($event)" matInput placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+<mat-table [dataSource]="dataSource" matSort>
+
+  <ng-container matColumnDef="position">
+    <mat-header-cell mat-sort-header *matHeaderCellDef> No. </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell mat-sort-header *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="weight">
+    <mat-header-cell mat-sort-header *matHeaderCellDef> Weight </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="symbol">
+    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div> -->
+
+<!-- virtual-scroll -->
+
+<!-- <cdk-virtual-scroll-viewport itemSize="100" class="container">
+  <div *cdkVirtualFor="let number of numbers" class="number">
+    {{number}}
+  </div>
+</cdk-virtual-scroll-viewport> -->
+
+<!-- Bottom-Sheet -->
+
+<!-- <button mat-raised-button (click)="openBottomSheet()">Open file</button> -->
+
+
+<!-- Chips -->
+
+<!-- <mat-form-field class="example-chip-list" appearance="fill">
+  <mat-label>Favorite Fruits</mat-label>
+  <mat-chip-list #chipList aria-label="Fruit selection" multiple>
+    <mat-chip *ngFor="let fruit of fruits" (removed)="removeChip(fruit)">
+      {{fruit.name}}
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip>
+    <input placeholder="New fruit..."
+           [matChipInputFor]="chipList"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur"
+           (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+</mat-form-field> -->
+
+<!-- Radio-Button -->
+
+<!-- <label id="example-radio-group-label">Pick your favorite season</label>
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="favoriteSeason">
+  <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Your favorite season is: {{favoriteSeason}}</div> -->
+
+<!-- Tree -->
+
+<mat-tree [dataSource]="dataSource1" [treeControl]="treeControl">
+  <!-- This is the tree node template for leaf nodes -->
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+    <!-- use a disabled button to provide padding for tree leaf -->
+    <button mat-icon-button disabled></button>
+    {{node.name}}
+  </mat-tree-node>
+  <!-- This is the tree node template for expandable nodes -->
+  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+    <button mat-icon-button matTreeNodeToggle
+            [attr.aria-label]="'Toggle ' + node.name">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    {{node.name}}
+  </mat-tree-node>
+</mat-tree>

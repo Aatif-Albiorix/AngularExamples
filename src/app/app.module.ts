@@ -35,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomSnackBarComponent, ThemeComponent } from './Material-Demo/theme/theme.component';
 import { MaterialModule } from './material/material.module';
 import { DialogExampleComponent } from './Material-Demo/dialog-example/dialog-example.component';
+import { BottomSheetExampleComponent } from './Material-Demo/bottom-sheet-example/bottom-sheet-example.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,8 @@ import { DialogExampleComponent } from './Material-Demo/dialog-example/dialog-ex
     DemoComponent,
     OperationComponent,
     ThemeComponent,
-    DialogExampleComponent
+    DialogExampleComponent,
+    BottomSheetExampleComponent
   ],
   entryComponents: [CustomSnackBarComponent, DialogExampleComponent],
   imports: [
