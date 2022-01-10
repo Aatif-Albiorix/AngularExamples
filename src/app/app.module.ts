@@ -36,6 +36,12 @@ import { CustomSnackBarComponent, ThemeComponent } from './Material-Demo/theme/t
 import { MaterialModule } from './material/material.module';
 import { DialogExampleComponent } from './Material-Demo/dialog-example/dialog-example.component';
 import { BottomSheetExampleComponent } from './Material-Demo/bottom-sheet-example/bottom-sheet-example.component';
+import { CounterComponent } from './counter/counter/counter.component';
+import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
+import { CounterButtonsComponent } from './counter/counter-buttons/counter-buttons.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter/state/counter.reducer';
+import { CustomCounterInputComponent } from './counter/custom-counter-input/custom-counter-input.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +67,11 @@ import { BottomSheetExampleComponent } from './Material-Demo/bottom-sheet-exampl
     OperationComponent,
     ThemeComponent,
     DialogExampleComponent,
-    BottomSheetExampleComponent
+    BottomSheetExampleComponent,
+    CounterComponent,
+    CounterOutputComponent,
+    CounterButtonsComponent,
+    CustomCounterInputComponent
   ],
   entryComponents: [CustomSnackBarComponent, DialogExampleComponent],
   imports: [
@@ -72,7 +82,8 @@ import { BottomSheetExampleComponent } from './Material-Demo/bottom-sheet-exampl
     ReactiveFormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    StoreModule.forRoot({counter: counterReducer})
     ],
   providers: [
     PostService,
