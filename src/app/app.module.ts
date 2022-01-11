@@ -42,6 +42,14 @@ import { CounterButtonsComponent } from './counter/counter-buttons/counter-butto
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter/state/counter.reducer';
 import { CustomCounterInputComponent } from './counter/custom-counter-input/custom-counter-input.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { PostListComponent } from './posts/post-list/post-list.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment'; // Angular CLI environment
+import { postsReducer } from './posts/state/posts.reducer';
+import { appReducer } from './store/app.state';
+import { AddPostComponent } from './posts/add-post/add-post.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +79,10 @@ import { CustomCounterInputComponent } from './counter/custom-counter-input/cust
     CounterComponent,
     CounterOutputComponent,
     CounterButtonsComponent,
-    CustomCounterInputComponent
+    CustomCounterInputComponent,
+    HeaderComponent,
+    PostListComponent,
+    AddPostComponent
   ],
   entryComponents: [CustomSnackBarComponent, DialogExampleComponent],
   imports: [
@@ -83,7 +94,10 @@ import { CustomCounterInputComponent } from './counter/custom-counter-input/cust
     RouterModule,
     BrowserAnimationsModule,
     MaterialModule,
-    StoreModule.forRoot({counter: counterReducer})
+    StoreModule.forRoot(appReducer),
+    StoreDevtoolsModule.instrument({
+      logOnly: environment.production, // Restrict extension to log-only mode
+    }),
     ],
   providers: [
     PostService,
