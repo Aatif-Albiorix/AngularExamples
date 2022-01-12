@@ -36,19 +36,11 @@ import { CustomSnackBarComponent, ThemeComponent } from './Material-Demo/theme/t
 import { MaterialModule } from './material/material.module';
 import { DialogExampleComponent } from './Material-Demo/dialog-example/dialog-example.component';
 import { BottomSheetExampleComponent } from './Material-Demo/bottom-sheet-example/bottom-sheet-example.component';
-import { CounterComponent } from './counter/counter/counter.component';
-import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
-import { CounterButtonsComponent } from './counter/counter-buttons/counter-buttons.component';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './counter/state/counter.reducer';
-import { CustomCounterInputComponent } from './counter/custom-counter-input/custom-counter-input.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { PostListComponent } from './posts/post-list/post-list.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment'; // Angular CLI environment
-import { postsReducer } from './posts/state/posts.reducer';
 import { appReducer } from './store/app.state';
-import { AddPostComponent } from './posts/add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -76,13 +68,7 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
     ThemeComponent,
     DialogExampleComponent,
     BottomSheetExampleComponent,
-    CounterComponent,
-    CounterOutputComponent,
-    CounterButtonsComponent,
-    CustomCounterInputComponent,
     HeaderComponent,
-    PostListComponent,
-    AddPostComponent
   ],
   entryComponents: [CustomSnackBarComponent, DialogExampleComponent],
   imports: [
@@ -94,7 +80,7 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
     RouterModule,
     BrowserAnimationsModule,
     MaterialModule,
-    StoreModule.forRoot(appReducer),
+    StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
